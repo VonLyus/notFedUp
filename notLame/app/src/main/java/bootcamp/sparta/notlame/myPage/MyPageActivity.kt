@@ -1,5 +1,6 @@
 package bootcamp.sparta.notlame.myPage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +9,13 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
+import bootcamp.sparta.notlame.MainActivity
 import bootcamp.sparta.notlame.R
 
 class MyPageActivity : AppCompatActivity() {
     private lateinit var todoEditText : EditText // 핢일 추가하기 EditText
     private lateinit var todoBtn : Button // 할일목록 입력 버튼
+    private lateinit var doneBtn : Button // 확인버튼
     private lateinit var todoCheckBoxList : ArrayList<CheckBox>
     private lateinit var view: View
 
@@ -21,10 +24,24 @@ class MyPageActivity : AppCompatActivity() {
         view = LayoutInflater.from(this).inflate(R.layout.my_page_activity, null)
         setContentView(view)
         initView()
-        todoBtnOnClickListener()
+        registerButtonClickListeners()
     }
 
-    // 할일 목록 추가버튼 클릭시 동작
+    // button에 onClickLstener 등록
+    private fun registerButtonClickListeners() {
+        todoBtnOnClickListener()
+        doneBtnOnClickListener()
+    }
+
+    // 확인버튼
+    private fun doneBtnOnClickListener() {
+        doneBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    // 할일 목록 추가버튼
     private fun todoBtnOnClickListener() {
         todoBtn.setOnClickListener {
 
@@ -44,6 +61,7 @@ class MyPageActivity : AppCompatActivity() {
     private fun initView() {
         todoEditText = findViewById(R.id.mypage_et_todo)
         todoBtn  = findViewById(R.id.mypage_btn_todo)
+        doneBtn = findViewById(R.id.mypage_btn_done)
         todoCheckBoxList = getCheckBoxList(view)
     }
 }
