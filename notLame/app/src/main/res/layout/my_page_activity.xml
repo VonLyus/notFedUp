@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray"
+    tools:context=".myPage.MyPageActivity">
+
+    <ImageView
+        android:id="@+id/mypage_profile_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:src="@drawable/mypage_dummy_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mypage_tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/mypage_profile_cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_profile_img"
+        tools:text="정나미" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mypage_profile_cardview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/mypage_tv_todo_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_tv_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mypage_tv_address_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_job_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="전화번호" />
+
+            <TextView
+                android:id="@+id/mypage_tv_address_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_job_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_address_title"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="010-1234-5678" />
+
+            <TextView
+                android:id="@+id/mypage_tv_job_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_address_title"
+                tools:text="직책" />
+
+            <TextView
+                android:id="@+id/mypage_tv_job_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_job_title"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_address_value"
+                tools:text="팀장" />
+
+            <TextView
+                android:id="@+id/mypage_tv_status_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_job_title"
+                tools:text="상태" />
+
+            <TextView
+                android:id="@+id/mypage_tv_status_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_status_title"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_job_value"
+                tools:text="온라인" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/mypage_tv_todo_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/mypage_todo_textview_title"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_profile_cardview" />
+
+    <EditText
+        android:id="@+id/mypage_et_todo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/mypage_todo_edittext_hint"
+        app:layout_constraintEnd_toStartOf="@+id/mypage_btn_todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_tv_todo_title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mypage_btn_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/blue"
+        android:text="@string/butotn_input"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/mypage_et_todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mypage_et_todo"
+        app:layout_constraintTop_toTopOf="@+id/mypage_et_todo" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/mypage_btn_done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_et_todo">
+
+        <LinearLayout
+            android:id="@+id/mypage_linearlayout_todo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/mypage_btn_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mypage_et_todo">
+
+            <CheckBox
+                android:id="@+id/checkbox_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_07"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_08"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_09"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+
+            <CheckBox
+                android:id="@+id/checkbox_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                tools:text="체크리스트1" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/mypage_btn_done"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_margin="25dp"
+        android:background="@color/blue"
+        android:text="@string/button_done"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
