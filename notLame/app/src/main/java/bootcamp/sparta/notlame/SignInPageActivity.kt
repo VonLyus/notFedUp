@@ -1,4 +1,4 @@
-package bootcamp.sparta.notlame.myPage
+package bootcamp.sparta.notlame
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,9 +6,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import bootcamp.sparta.notlame.MainPageActivity
 import bootcamp.sparta.notlame.R
 
-class SignInActivity : AppCompatActivity() {
+class SignInPageActivity : AppCompatActivity() {
 
     private lateinit var editTextId: EditText
     private lateinit var editTextPassword: EditText
@@ -17,7 +18,7 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_sign_in_page)
 
         editTextId = findViewById(R.id.editTextId)
         editTextPassword = findViewById(R.id.editTextPassword)
@@ -39,17 +40,13 @@ class SignInActivity : AppCompatActivity() {
                 val age = sharedPrefs.getString("userAge", "나이 없음")
                 val mbti = sharedPrefs.getString("userMBTI", "MBTI 없음")
 
-//                val intent = Intent(this, HomeActivity::class.java)
-//                intent.putExtra("userId", id)
-//                intent.putExtra("userName", name)
-//                intent.putExtra("userAge", age)
-//                intent.putExtra("userMBTI", mbti)
-//                startActivity(intent)
+                val intent = Intent(this, MainPageActivity::class.java)
+                startActivity(intent)
             }
         }
 
         buttonSignUp.setOnClickListener {
-//            startActivity(Intent(this, SignUpActivity::class.java))
+            //startActivity(Intent(this, SignUpActivity::class.java))
         }
     }
 }

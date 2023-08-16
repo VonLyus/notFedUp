@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
-import bootcamp.sparta.notlame.MainActivity
+import bootcamp.sparta.notlame.MainPageActivity
 import bootcamp.sparta.notlame.R
 
 class MyPageActivity : AppCompatActivity() {
@@ -36,7 +36,7 @@ class MyPageActivity : AppCompatActivity() {
     // 확인버튼
     private fun doneBtnOnClickListener() {
         doneBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainPageActivity::class.java)
             startActivity(intent)
         }
     }
