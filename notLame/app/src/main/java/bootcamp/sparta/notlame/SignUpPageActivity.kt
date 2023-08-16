@@ -1,6 +1,5 @@
-package com.example.practice
+package bootcamp.sparta.notlame
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -10,10 +9,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
-import bootcamp.sparta.notlame.R
 import java.util.regex.Pattern
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpPageActivity : AppCompatActivity() {
 
     private val idPattern = Pattern.compile("^[a-zA-Z0-9]{5,10}\$")
     private val pwPattern = Pattern.compile("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@#$%^&+=]).{8,15}\$")
@@ -133,7 +131,7 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         btn_signCancel.setOnClickListener {
-            Toast.makeText(this@SignUpActivity, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SignUpPageActivity, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
             //val intent = Intent(this@SignUpActivity, SignInPageActivity::class.java)
             startActivity(intent)
             finish()
