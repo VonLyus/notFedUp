@@ -7,30 +7,55 @@ import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import bootcamp.sparta.notlame.MainPageActivity
 import bootcamp.sparta.notlame.R
 
 class MyPageActivity : AppCompatActivity() {
-    private val todoEditText: EditText by lazy {
-        findViewById(R.id.mypage_et_todo)
-    } // 핢일 추가하기 EditText
-    private val todoBtn: Button by lazy {
-        findViewById(R.id.mypage_btn_todo)
-    } // 할일목록 입력 버튼
-    private val doneBtn: Button by lazy {
-        findViewById(R.id.mypage_btn_done)
-    } // 확인버튼
-    private val layout: LinearLayout by lazy {
-        findViewById(R.id.mypage_linearlayout_todo)
-    }
+    // 핢일 추가하기 EditText
+    private val todoEditText: EditText by lazy { findViewById(R.id.mypage_et_todo) }
+    // 할일목록 입력 버튼
+    private val todoBtn: Button by lazy { findViewById(R.id.mypage_btn_todo) }
+    // 확인버튼
+    private val doneBtn: Button by lazy { findViewById(R.id.mypage_btn_done) }
+    // 할일목록 LinearLayout
+    private val layout: LinearLayout by lazy { findViewById(R.id.mypage_linearlayout_todo) }
+
+    // 이미지
+    private val iv_Image : ImageView by lazy { findViewById(R.id.mypage_iv_image) }
+    // 이름
+    private val tv_name : TextView by lazy { findViewById(R.id.mypage_tv_name) }
+    // 직책
+    private val tv_position : TextView by lazy { findViewById(R.id.mypage_tv_position_value) }
+
+    // 내 정보(이미지)
+    private val intent_Image: Int by lazy { intent.getIntExtra(getString(R.string.intent_userImage), -1) }
+
+    // 내 정보(이름)
+    private val intent_Name: String? by lazy { intent.getStringExtra(getString(R.string.intent_userNameText)) }
+
+    // 내 정보(직책)
+    private val intent_Position: String? by lazy { intent.getStringExtra(getString(R.string.intent_userPositionText)) }
+
+    // 할일목록 CheckBox관리를위한 List
     private var todoCheckBoxList: MutableList<CheckBox> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.my_page_activity)
+
+        setLayoutData()
         registerButtonClickListeners()
+    }
+
+    // 인텐트에서 받아온 Data들을 Layout에 배치
+    private fun setLayoutData() {
+        iv_Image.setImageResource(intent_Image)
+        tv_name.text = intent_Name
+        tv_position.text = intent_Position
     }
 
     // button에 onClickLstener 등록
@@ -70,7 +95,7 @@ class MyPageActivity : AppCompatActivity() {
     }
 
     // 체크박스 컴포넌트 생성
-    private fun createCheckBox(text: String) : CheckBox {
+    private fun createCheckBox(text: String): CheckBox {
         val checkBox = CheckBox(this)
         checkBox.text = text
         checkBox.id = todoCheckBoxList.size
@@ -88,7 +113,7 @@ class MyPageActivity : AppCompatActivity() {
     }
 
     // 체크박스 컴포넌트 Layout에 할당
-    private fun allocCheckBox(checkBox : CheckBox) {
+    private fun allocCheckBox(checkBox: CheckBox) {
         layout.addView(
             checkBox,
             LinearLayout.LayoutParams(

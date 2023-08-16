@@ -6,4 +6,8 @@
     <string name="butotn_input">입력</string>
     <string name="mypage_overlap_todo">이미 등록된 할일이 목록에 존재합니다.</string>
     <string name="mypage_edittext_null">할일을 추가하시려면 텍스트를 입력해주세요!</string>
+
+    <string name="intent_userImage">userImage</string>
+    <string name="intent_userNameText">userNameText</string>
+    <string name="intent_userPositionText">userPositionText</string>
 </resources>

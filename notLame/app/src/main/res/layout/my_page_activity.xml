@@ -8,7 +8,7 @@
     tools:context=".myPage.MyPageActivity">
 
     <ImageView
-        android:id="@+id/mypage_profile_img"
+        android:id="@+id/mypage_iv_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/mypage_profile_cardview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_iv_image"
         tools:text="정나미" />
 
     <androidx.cardview.widget.CardView
@@ -47,32 +47,32 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/mypage_tv_address_title"
+                android:id="@+id/mypage_tv_phone_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:gravity="center"
                 android:textSize="13sp"
-                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_job_title"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_position_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="전화번호" />
 
             <TextView
-                android:id="@+id/mypage_tv_address_value"
+                android:id="@+id/mypage_tv_phone_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_job_value"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_position_value"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/mypage_tv_address_title"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_phone_title"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="010-1234-5678" />
 
             <TextView
-                android:id="@+id/mypage_tv_job_title"
+                android:id="@+id/mypage_tv_position_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -81,19 +81,19 @@
                 android:textSize="13sp"
                 app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_address_title"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_phone_title"
                 tools:text="직책" />
 
             <TextView
-                android:id="@+id/mypage_tv_job_value"
+                android:id="@+id/mypage_tv_position_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_value"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/mypage_tv_job_title"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_address_value"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_position_title"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_phone_value"
                 tools:text="팀장" />
 
             <TextView
@@ -106,7 +106,7 @@
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_job_title"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_position_title"
                 tools:text="상태" />
 
             <TextView
@@ -118,7 +118,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/mypage_tv_status_title"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_job_value"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_position_value"
                 tools:text="온라인" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
