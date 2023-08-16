@@ -1,11 +1,10 @@
-package bootcamp.sparta.notlame
+package bootcamp.sparta.notlame.mainPage
 
 import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -14,6 +13,8 @@ import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
+import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.writePage.WritePageActivity
 
 class MainPageActivity : AppCompatActivity() {
     private lateinit var getContent: ActivityResultLauncher<Intent>

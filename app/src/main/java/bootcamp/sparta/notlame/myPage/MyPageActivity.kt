@@ -11,7 +11,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import bootcamp.sparta.notlame.MainPageActivity
+import bootcamp.sparta.notlame.mainPage.MainPageActivity
 import bootcamp.sparta.notlame.R
 
 class MyPageActivity : AppCompatActivity() {

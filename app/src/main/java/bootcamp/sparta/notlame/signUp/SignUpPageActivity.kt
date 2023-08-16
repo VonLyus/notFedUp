@@ -1,4 +1,4 @@
-package bootcamp.sparta.notlame
+package bootcamp.sparta.notlame.signUp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
+import bootcamp.sparta.notlame.R
 import java.util.regex.Pattern
 
 class SignUpPageActivity : AppCompatActivity() {
