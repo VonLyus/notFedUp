@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import bootcamp.sparta.notlame.MainPageActivity
 import bootcamp.sparta.notlame.R
 
 class SignInActivity : AppCompatActivity() {
@@ -39,11 +40,7 @@ class SignInActivity : AppCompatActivity() {
                 val age = sharedPrefs.getString("userAge", "나이 없음")
                 val mbti = sharedPrefs.getString("userMBTI", "MBTI 없음")
 
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("userId", id)
-                intent.putExtra("userName", name)
-                intent.putExtra("userAge", age)
-                intent.putExtra("userMBTI", mbti)
+                val intent = Intent(this, MainPageActivity::class.java)
                 startActivity(intent)
             }
         }
