@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 
 class DetailPage : AppCompatActivity() {
     lateinit var detailInputBtn: Button
@@ -33,8 +34,12 @@ class DetailPage : AppCompatActivity() {
 
         detailInputBtn.setOnClickListener {
             val text = detailInputEdit.text.toString()
-            inputText(text)
-            detailInputEdit.setText(/* text = */ null)
+            if(text.isNullOrBlank()){
+                Toast.makeText(this, "입력된 값이 없습니다.", Toast.LENGTH_SHORT).show()
+            }else{
+                inputText(text)
+                detailInputEdit.setText(/* text = */ null)
+            }
         }
     }
 
