@@ -27,6 +27,10 @@ class DetailPage : AppCompatActivity() {
         detailInputEdit = findViewById<EditText>(R.id.detailInputEdit)
         val backBtn = findViewById<ImageButton>(R.id.imageButton)
 
+        backBtn.setOnClickListener {
+            finish()
+        }
+
         detailInputBtn.setOnClickListener {
             val text = detailInputEdit.text.toString()
             inputText(text)
