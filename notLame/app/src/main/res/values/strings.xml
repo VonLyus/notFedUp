@@ -4,4 +4,6 @@
     <string name="mypage_todo_textview_title">할일 목록</string>
     <string name="button_done">확인</string>
     <string name="butotn_input">입력</string>
+    <string name="mypage_overlap_todo">이미 등록된 할일이 목록에 존재합니다.</string>
+    <string name="mypage_edittext_null">할일을 추가하시려면 텍스트를 입력해주세요!</string>
 </resources>
