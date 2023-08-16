@@ -15,6 +15,11 @@
         <activity
             android:name=".SignInPageActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".DetailPage"
+            android:exported="false" />
+
         <activity
             android:name=".myPage.MyPageActivity"
             android:exported="true"
