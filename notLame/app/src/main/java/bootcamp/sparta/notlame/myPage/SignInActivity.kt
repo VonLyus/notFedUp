@@ -39,17 +39,17 @@ class SignInActivity : AppCompatActivity() {
                 val age = sharedPrefs.getString("userAge", "나이 없음")
                 val mbti = sharedPrefs.getString("userMBTI", "MBTI 없음")
 
-                val intent = Intent(this, HomeActivity::class.java)
-                intent.putExtra("userId", id)
-                intent.putExtra("userName", name)
-                intent.putExtra("userAge", age)
-                intent.putExtra("userMBTI", mbti)
-                startActivity(intent)
+//                val intent = Intent(this, HomeActivity::class.java)
+//                intent.putExtra("userId", id)
+//                intent.putExtra("userName", name)
+//                intent.putExtra("userAge", age)
+//                intent.putExtra("userMBTI", mbti)
+//                startActivity(intent)
             }
         }
 
         buttonSignUp.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
+//            startActivity(Intent(this, SignUpActivity::class.java))
         }
     }
 }
