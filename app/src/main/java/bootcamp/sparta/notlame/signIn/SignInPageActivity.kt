@@ -1,4 +1,4 @@
-package bootcamp.sparta.notlame
+package bootcamp.sparta.notlame.signIn
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import bootcamp.sparta.notlame.MainPageActivity
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.mainPage.MainPageActivity
 
 class SignInPageActivity : AppCompatActivity() {
 

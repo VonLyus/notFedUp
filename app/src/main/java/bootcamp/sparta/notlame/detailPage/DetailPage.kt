@@ -1,14 +1,14 @@
-package bootcamp.sparta.notlame
+package bootcamp.sparta.notlame.detailPage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import bootcamp.sparta.notlame.R
 
 class DetailPage : AppCompatActivity() {
     lateinit var detailInputBtn: Button
