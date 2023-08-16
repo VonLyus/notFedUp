@@ -8,11 +8,11 @@
     tools:context=".myPage.MyPageActivity">
 
     <ImageView
-        android:id="@+id/mypage_profile_img"
+        android:id="@+id/mypage_iv_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
-        android:src="@drawable/mypage_dummy_image"
+        tools:src="@drawable/mypage_dummy_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/mypage_profile_cardview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mypage_profile_img"
+        app:layout_constraintTop_toBottomOf="@+id/mypage_iv_image"
         tools:text="정나미" />
 
     <androidx.cardview.widget.CardView
@@ -47,32 +47,32 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/mypage_tv_address_title"
+                android:id="@+id/mypage_tv_phone_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:gravity="center"
                 android:textSize="13sp"
-                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_job_title"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_position_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="전화번호" />
+                android:text="전화번호" />
 
             <TextView
-                android:id="@+id/mypage_tv_address_value"
+                android:id="@+id/mypage_tv_phone_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_job_value"
+                app:layout_constraintBottom_toTopOf="@+id/mypage_tv_position_value"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/mypage_tv_address_title"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_phone_title"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="010-1234-5678" />
 
             <TextView
-                android:id="@+id/mypage_tv_job_title"
+                android:id="@+id/mypage_tv_position_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -81,19 +81,19 @@
                 android:textSize="13sp"
                 app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_title"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_address_title"
-                tools:text="직책" />
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_phone_title"
+                android:text="직책" />
 
             <TextView
-                android:id="@+id/mypage_tv_job_value"
+                android:id="@+id/mypage_tv_position_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_value"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/mypage_tv_job_title"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_address_value"
+                app:layout_constraintStart_toEndOf="@+id/mypage_tv_position_title"
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_phone_value"
                 tools:text="팀장" />
 
             <TextView
@@ -106,8 +106,8 @@
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_job_title"
-                tools:text="상태" />
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_position_title"
+                android:text="상태" />
 
             <TextView
                 android:id="@+id/mypage_tv_status_value"
@@ -118,8 +118,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/mypage_tv_status_title"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_job_value"
-                tools:text="온라인" />
+                app:layout_constraintTop_toBottomOf="@+id/mypage_tv_position_value"
+                android:text="온라인" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
@@ -179,75 +179,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mypage_et_todo">
 
-            <CheckBox
-                android:id="@+id/checkbox_01"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_02"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_03"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_04"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_05"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_06"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_07"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_08"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_09"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
-
-            <CheckBox
-                android:id="@+id/checkbox_10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="invisible"
-                tools:text="체크리스트1" />
         </LinearLayout>
 
     </ScrollView>
