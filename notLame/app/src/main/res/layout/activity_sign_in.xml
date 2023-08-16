@@ -11,7 +11,14 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
-        android:src="@drawable/logo_image" /> <!-- 여기서 'logo_image'는 로고 이미지의 리소스 이름입니다. -->
+        android:src="@drawable/logo_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextId"
@@ -20,6 +27,13 @@
         android:hint="Enter your ID"
         android:inputType="text"
         android:padding="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextPassword"
