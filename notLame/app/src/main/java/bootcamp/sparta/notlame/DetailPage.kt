@@ -40,7 +40,6 @@ class DetailPage : AppCompatActivity() {
 
     fun inputText(text:String){
         val newText = TextView(this)
-        val imageView = ImageView(this)
         newText.setText(text)
         detailInputArea.addView(newText)
     }
