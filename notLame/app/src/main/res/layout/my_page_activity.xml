@@ -57,7 +57,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/mypage_tv_position_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="전화번호" />
+                android:text="전화번호" />
 
             <TextView
                 android:id="@+id/mypage_tv_phone_value"
@@ -82,7 +82,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/mypage_tv_status_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mypage_tv_phone_title"
-                tools:text="직책" />
+                android:text="직책" />
 
             <TextView
                 android:id="@+id/mypage_tv_position_value"
@@ -107,7 +107,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mypage_tv_position_title"
-                tools:text="상태" />
+                android:text="상태" />
 
             <TextView
                 android:id="@+id/mypage_tv_status_value"
@@ -119,7 +119,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/mypage_tv_status_title"
                 app:layout_constraintTop_toBottomOf="@+id/mypage_tv_position_value"
-                tools:text="온라인" />
+                android:text="온라인" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
