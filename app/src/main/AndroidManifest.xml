@@ -13,30 +13,11 @@
         android:theme="@style/Theme.NotLame"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpPageActivity"
+            android:name=".WritePageActivity"
             android:exported="false" />
-
         <activity
-            android:name=".SignInPageActivity"
+            android:name=".BoardDetailViewMoreActivity"
             android:exported="false" />
-
-        <activity
-            android:name=".DetailPage"
-            android:exported="false" />
-
-        <activity
-            android:name=".myPage.MyPageActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-
-        </activity>
         <activity
             android:name=".MainPageActivity"
             android:exported="true">
