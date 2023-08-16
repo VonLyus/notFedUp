@@ -1,0 +1,11 @@
+package bootcamp.sparta.notlame
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class WritePageActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_write_page)
+    }
+}
