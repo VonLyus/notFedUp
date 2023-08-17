@@ -4,6 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="weightGray">#D9D9D9</color>
     <color name="lightGray">#D9D9D9</color>
-    <color name="blue">#3A75F4</color>
+    <color name="button_signup_color">#3A75F4</color>
     <color name="writePageButton">#3A75F4</color>
 </resources>
