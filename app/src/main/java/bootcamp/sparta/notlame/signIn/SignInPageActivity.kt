@@ -43,10 +43,12 @@ class SignInPageActivity : AppCompatActivity() {
 
             if (id.isEmpty() || password.isEmpty()) {
 
+
                 Toast.makeText(this, "아이디/비밀번호 둘 중 하나가 입력이 비어있습니다.", Toast.LENGTH_SHORT).show()
             } else if((id.equals(checkId)) && (password.equals(checkPw))){
 
-                Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.successLogin, Toast.LENGTH_SHORT).show()
+
 
 //                // Get the user information from SharedPreferences
 //                val sharedPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
@@ -66,7 +68,7 @@ class SignInPageActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             else{
-                Toast.makeText(this, "아이디/비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.checkIDPassword, Toast.LENGTH_SHORT).show()
             }
         }
 

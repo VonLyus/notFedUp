@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">notLame</string>
-    <string name="mypage_todo_textview_title">to do list</string>
-    <string name="button_done">done</string>
-    <string name="butotn_input">input</string>
+    <string name="mypage_todo_edittext_hint">Add to-do</string>
+    <string name="mypage_todo_textview_title">To-do list</string>
+    <string name="button_done">Done</string>
+    <string name="butotn_input">Input</string>
+    <string name="mypage_overlap_todo">Already registered to-dos exist in the list.</string>
+    <string name="mypage_edittext_null">Enter to further shorten the to-do!</string>
     <string name="intent_userImage">userImage</string>
     <string name="intent_userNameText">userNameText</string>
     <string name="intent_userPositionText">userPositionText</string>
@@ -11,4 +14,26 @@
     <string name="warningNull">No value entered.</string>
     <string name="noticeComment">"Enter your comment "</string>
     <string name="comment">comment</string>
+    <string name="noticeTeam">Make your dreams come true in NotLame!</string>
+    <string name="id">ID</string>
+    <string name="password">Password</string>
+    <string name="logIn">LOG IN</string>
+    <string name="logUp">LOG UP</string>
+    <string name="checkIDPassword">Please check your ID/Password</string>
+    <string name="successLogin">Log-in succeed</string>
+    <string name="subject">Subject</string>
+    <string name="inputContents">Please enter your details</string>
+    <string name="cancel">Cancel</string>
+    <string name="name">Name</string>
+    <string name="nameColon">"Name : "</string>
+    <string name="position">Position</string>
+    <string name="positionColon">"Position : "</string>
+    <string name="teamMember">Team Member</string>
+    <string name="teamNoticeBoard">Team Notive Board</string>
+    <string name="notice2Team">" It's not already obvious that you are with us"</string>
+    <string name="inputID">Please enter your ID</string>
+    <string name="inputPassword">Please enter your password</string>
+    <string name="inputPosition">Please enter your position</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="inputPhoneNumber">Please enter your phone number</string>
 </resources>
