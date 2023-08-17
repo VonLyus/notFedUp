@@ -16,7 +16,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:hint="제목"
+        android:hint="@string/subject"
         android:textSize="20dp"/>
 
     <androidx.cardview.widget.CardView
@@ -36,7 +36,7 @@
             android:layout_margin="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="내용을 입력해주세요"
+            android:hint="@string/inputContents"
             android:textSize="16dp"/>
 
     </androidx.cardview.widget.CardView>
@@ -48,7 +48,7 @@
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="확인"
+        android:text="@string/button_done"
         android:background="@drawable/btn_shape"/>
 
     <android.widget.Button
@@ -58,7 +58,7 @@
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:text="취소"
+        android:text="@string/cancel"
         android:background="@drawable/btn_shape"/>
 
 </LinearLayout>

@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="35dp"
-            android:text="이름 : "
+            android:text="@string/nameColon"
             android:textSize="15dp"
             app:layout_constraintStart_toEndOf="@+id/userImageFrame"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
-            android:hint="이름"
+            android:hint="@string/name"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/nameTextView"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginBottom="35dp"
-            android:text="직책 : "
+            android:text="@string/positionColon"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
-            android:hint="직책"
+            android:hint="@string/position"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/positionTextView"
@@ -107,7 +107,7 @@
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="팀 멤버"/>
+            android:text="@string/teamMember"/>
     </androidx.cardview.widget.CardView>
 
     <!--  List  -->
@@ -216,7 +216,7 @@
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="팀 게시판"/>
+            android:text="@string/teamNoticeBoard"/>
     </androidx.cardview.widget.CardView>
     <!--    팀 게시판    -->
     <LinearLayout
