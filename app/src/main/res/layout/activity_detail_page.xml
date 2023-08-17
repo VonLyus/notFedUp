@@ -32,7 +32,6 @@
             android:id="@+id/detailImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/mypage_dummy_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageButton"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,7 +42,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="정나미"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/detailImage"
             app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +62,8 @@
                 android:id="@+id/detailSubject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:id="@+id/detailContent"
@@ -79,7 +78,8 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="댓글"
+        android:text="@string/comment"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +116,7 @@
             android:id="@+id/detailInputEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="댓글을 입력하세요."
+            android:hint="@string/noticeComment"
             android:layout_weight="8" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -126,6 +126,6 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="2"
-            android:text="입력" />
+            android:text="@string/butotn_input"/>
     </LinearLayout>
 </LinearLayout>
