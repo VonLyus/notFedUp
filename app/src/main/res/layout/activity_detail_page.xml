@@ -78,7 +78,8 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="댓글"
+        android:text="@string/comment"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +116,7 @@
             android:id="@+id/detailInputEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="댓글을 입력하세요."
+            android:hint="@string/noticeComment"
             android:layout_weight="8" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -125,6 +126,6 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_weight="2"
-            android:text="입력" />
+            android:text="@string/butotn_input"/>
     </LinearLayout>
 </LinearLayout>

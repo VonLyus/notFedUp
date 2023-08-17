@@ -22,10 +22,9 @@ class DetailPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
+
         val userName = intent.getStringExtra("userName")
         val userImage = intent.getIntExtra("userImage", R.drawable.mypage_dummy_image)
-
-
         val detailSubject = findViewById<TextView>(R.id.detailSubject)
         val detailContent = findViewById<TextView>(R.id.detailContent)
         val detailName = findViewById<TextView>(R.id.detailName)
@@ -37,7 +36,7 @@ class DetailPage : AppCompatActivity() {
         val backBtn = findViewById<ImageButton>(R.id.imageButton)
 
         backBtn.setOnClickListener {
-            var snackBar = Snackbar.make(it, "작성중인 내용이 삭제될 수도 있습니다.", Snackbar.LENGTH_SHORT).setAction("확인", View.OnClickListener {
+            var snackBar = Snackbar.make(it, R.string.warningBack, Snackbar.LENGTH_SHORT).setAction(R.string.button_done, View.OnClickListener {
                 finish()
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             })
@@ -47,17 +46,19 @@ class DetailPage : AppCompatActivity() {
         detailInputBtn.setOnClickListener {
             val text = detailInputEdit.text.toString()
             if(text.isNullOrBlank()){
-                Toast.makeText(this, "입력된 값이 없습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.warningNull, Toast.LENGTH_SHORT).show()
             }else{
-                inputText(text)
+                if (userName != null) {
+                    inputText(text, userName)
+                }
                 detailInputEdit.setText(/* text = */ null)
             }
         }
     }
 
-    fun inputText(text:String){
+    fun inputText(text:String, userName:String){
         val newText = TextView(this)
-        newText.setText(text)
+        newText.setText(userName + " : " + text)
         detailInputArea.addView(newText)
     }
 }

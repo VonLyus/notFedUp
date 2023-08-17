@@ -10,4 +10,11 @@
     <string name="intent_userImage">userImage</string>
     <string name="intent_userNameText">userNameText</string>
     <string name="intent_userPositionText">userPositionText</string>
+    
+    
+    <string name="warningBack">작성 중인 내용이 삭제될 수도 있습니다.</string>
+    <string name="warningNull">입력된 값이 없습니다.</string>
+    <string name="noticeComment">댓글을 입력하세요.</string>
+    <string name="comment">댓글</string>
+    
 </resources>
