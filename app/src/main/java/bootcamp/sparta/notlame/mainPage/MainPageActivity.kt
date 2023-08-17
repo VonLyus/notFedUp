@@ -14,6 +14,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.detailPage.DetailPage
 import bootcamp.sparta.notlame.writePage.WritePageActivity
 
 class MainPageActivity : AppCompatActivity() {
@@ -97,7 +98,11 @@ class MainPageActivity : AppCompatActivity() {
         //더 보기 기능
         val teamBoardDetailViewMore1 = findViewById<TextView>(R.id.teamBoardDetailViewMore1)
         teamBoardDetailViewMore1.setOnClickListener{
-            //val intent = Intent(this, DetailPageActivity::class.java)
+            val intent = Intent(this, DetailPage::class.java)
+            intent.putExtra("userName", "정나미")
+            intent.putExtra("userImage", R.drawable.mypage_dummy_image)
+            intent.putExtra("detailSubject", "제목" )
+            intent.putExtra("detailContent", "내용")
             startActivity(intent)
         }
     }
