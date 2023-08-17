@@ -32,7 +32,6 @@
             android:id="@+id/detailImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/mypage_dummy_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageButton"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,7 +42,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
-            android:text="정나미"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/detailImage"
             app:layout_constraintTop_toTopOf="parent" />
@@ -64,7 +62,8 @@
                 android:id="@+id/detailSubject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
 
             <TextView
                 android:id="@+id/detailContent"
