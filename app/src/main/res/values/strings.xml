@@ -10,8 +10,32 @@
     <string name="intent_userImage">userImage</string>
     <string name="intent_userNameText">userNameText</string>
     <string name="intent_userPositionText">userPositionText</string>
-    
-    
+
+    <string name="app_name1">Practice</string>
+    <string name="signup_name">이름</string>
+    <string name="signup_name1">이름</string>
+    <string name="signup_phone">전화번호</string>
+    <string name="signup_phone1">전화번호를 입력하세요.</string>
+    <string name="signup_position">직책</string>
+    <string name="signup_position1">직책을 입력하세요.</string>
+    <string name="signup_id">아이디</string>
+    <string name="signup_id1">아이디를 입력하세요.</string>
+    <string name="signup_password">비밀번호</string>
+    <string name="signup_password1">비밀번호를 입력하세요.</string>
+    <string name="signup_ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="signup_we">우리와 함께하는 당신은\n이미 뻔하지 않조!</string>
+    <string name="_5_10">5~10자의 영어(대소문자)와 숫자만 입력하세요.</string>
+    <string name="_8_15">8~15자의 영어(대소문자), 숫자, 특수문자를 포함하세요.</string>
+    <string name="_10_11">10~11자의 숫자만 입력하세요.</string>
+    <string name="kor">한글 또는 영어만 입력하세요.</string>
+    <string name="info">입력되지 않은 정보가 있습니다</string>
+    <string name="signup_kor">한글 또는 영어만 입력하세요.</string>
+    <string name="signup__5_10">5~10자의 영어(대소문자)와 숫자만 입력하세요.</string>
+    <string name="signup__8_15">8~15자의 영어(대소문자), 숫자, 특수문자를 포함하세요.</string>
+    <string name="signup__10_11">10~11자의 숫자만 입력하세요.</string>
+    <string name="signup_cancel1">취소 되었습니다.</string>
+
     <string name="warningBack">작성 중인 내용이 삭제될 수도 있습니다.</string>
     <string name="warningNull">입력된 값이 없습니다.</string>
     <string name="noticeComment">댓글을 입력하세요.</string>

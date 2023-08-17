@@ -39,7 +39,7 @@ class SignUpPageActivity : AppCompatActivity() {
                 val id = s.toString()
                 val valid = idPattern.matcher(id).matches()
                 if (!valid) {
-                    et_id.error = "5~10자의 영어(대소문자)와 숫자만 입력하세요."
+                    et_id.error = getString(R.string._5_10)
                 }
             }
 
@@ -52,7 +52,7 @@ class SignUpPageActivity : AppCompatActivity() {
                 val pw = s.toString()
                 val valid = pwPattern.matcher(pw).matches()
                 if (!valid) {
-                    et_pw.error = "8~15자의 영어(대소문자), 숫자, 특수문자를 포함하세요."
+                    et_pw.error = getString(R.string._8_15)
                 }
             }
 
@@ -65,7 +65,7 @@ class SignUpPageActivity : AppCompatActivity() {
                 val phone = s.toString()
                 val valid = phonePattern.matcher(phone).matches()
                 if (!valid) {
-                    et_phone.error = "10~11자의 숫자만 입력하세요."
+                    et_phone.error = getString(R.string._10_11)
                 }
             }
 
@@ -78,7 +78,7 @@ class SignUpPageActivity : AppCompatActivity() {
                 val name = s.toString()
                 val valid = namePattern.matcher(name).matches()
                 if (!valid) {
-                    et_name.error = "한글 또는 영어만 입력하세요."
+                    et_name.error = getString(R.string.kor)
                 }
             }
 
@@ -94,7 +94,7 @@ class SignUpPageActivity : AppCompatActivity() {
             val position = et_position.text.toString()
 
             if (name.isBlank() || id.isBlank() || pw.isBlank() || phone.isBlank() || position.isBlank()) {
-                Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.info), Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -105,22 +105,22 @@ class SignUpPageActivity : AppCompatActivity() {
             val phoneValid = phonePattern.matcher(phone).matches()
 
             if (!nameValid) {
-                et_name.error = "한글 또는 영어만 입력하세요."
+                et_name.error = getString(R.string.signup_kor)
                 return@setOnClickListener
             }
 
             if (!idValid) {
-                et_id.error = "5~10자의 영어(대소문자)와 숫자만 입력하세요."
+                et_id.error = getString(R.string.signup__5_10)
                 return@setOnClickListener
             }
 
             if (!pwValid) {
-                et_pw.error = "8~15자의 영어(대소문자), 숫자, 특수문자를 포함하세요."
+                et_pw.error = getString(R.string.signup__8_15)
                 return@setOnClickListener
             }
 
             if (!phoneValid) {
-                et_phone.error = "10~11자의 숫자만 입력하세요."
+                et_phone.error = getString(R.string.signup__10_11)
                 return@setOnClickListener
             }
 
@@ -134,8 +134,8 @@ class SignUpPageActivity : AppCompatActivity() {
         }
 
         btn_signCancel.setOnClickListener {
-
-            Toast.makeText(this@SignUpPageActivity, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SignUpPageActivity,
+                getString(R.string.signup_cancel1), Toast.LENGTH_SHORT).show()
             //val intent = Intent(this@SignUpActivity, SignInPageActivity::class.java)
             startActivity(intent)
             finish()
