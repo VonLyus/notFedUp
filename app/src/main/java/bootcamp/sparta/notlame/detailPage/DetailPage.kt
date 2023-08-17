@@ -24,15 +24,18 @@ class DetailPage : AppCompatActivity() {
         setContentView(R.layout.activity_detail_page)
 
         val userName = intent.getStringExtra("userName")
-        val userImage = intent.getIntExtra("userImage", R.drawable.mypage_dummy_image)
+        val userImage = intent.getIntExtra("userImage", R.drawable.logo1)
         val detailSubject = findViewById<TextView>(R.id.detailSubject)
         val detailContent = findViewById<TextView>(R.id.detailContent)
         val detailName = findViewById<TextView>(R.id.detailName)
         val detailImage = findViewById<ImageView>(R.id.detailImage)
+        val userImageComment = findViewById<ImageView>(R.id.userImageComment)
         detailSubject.setText(intent.getStringExtra("detailSubject"))
         detailContent.setText(intent.getStringExtra("detailContent"))
         detailName.setText(userName)
         detailImage.setImageResource(userImage)
+        userImageComment.setImageResource(userImage)
+
         val backBtn = findViewById<ImageButton>(R.id.imageButton)
 
         backBtn.setOnClickListener {
@@ -45,11 +48,13 @@ class DetailPage : AppCompatActivity() {
 
         detailInputBtn.setOnClickListener {
             val text = detailInputEdit.text.toString()
-            if(text.isNullOrBlank()){
+            if(text.isBlank()){
                 Toast.makeText(this, R.string.warningNull, Toast.LENGTH_SHORT).show()
             }else{
                 if (userName != null) {
                     inputText(text, userName)
+                }else{
+                    inputText(text, "이름 없음")
                 }
                 detailInputEdit.setText(/* text = */ null)
             }
@@ -58,7 +63,7 @@ class DetailPage : AppCompatActivity() {
 
     fun inputText(text:String, userName:String){
         val newText = TextView(this)
-        newText.setText(userName + " : " + text)
+        newText.setText(/* text = */ "$userName : $text")
         detailInputArea.addView(newText)
     }
 }
