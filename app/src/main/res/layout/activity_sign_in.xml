@@ -74,7 +74,7 @@
         android:text="LOGIN"
         android:textColor="#FFFFFF"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_background" />
+        android:background="@drawable/button_background_rect" />
 
     <!-- 회원 가입 버튼 -->
     <Button
@@ -84,6 +84,6 @@
         android:text="SIGN UP"
         android:textColor="#FFFFFF"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rectangular_button_background" />
+        android:background="@drawable/button_background2_rect" />
 
 </LinearLayout>
