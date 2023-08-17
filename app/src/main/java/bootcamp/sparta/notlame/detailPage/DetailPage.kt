@@ -35,6 +35,8 @@ class DetailPage : AppCompatActivity() {
         detailName.setText(userName)
         detailImage.setImageResource(userImage)
         userImageComment.setImageResource(userImage)
+        detailImage.clipToOutline = true
+        userImageComment.clipToOutline = true
 
         val backBtn = findViewById<ImageButton>(R.id.imageButton)
 
