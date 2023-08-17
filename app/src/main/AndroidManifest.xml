@@ -23,20 +23,12 @@
             android:exported="true" />
         <activity
             android:name=".detailPage.DetailPage"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".myPage.MyPageActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustPan">
+            android:windowSoftInputMode="adjustPan" />
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-
-        </activity>
         <activity
             android:name=".mainPage.MainPageActivity"
             android:exported="true">
