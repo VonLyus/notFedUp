@@ -21,6 +21,8 @@ class SignUpPageActivity : AppCompatActivity() {
     private val phonePattern = Pattern.compile("^[0-9]{10,11}\$")
     private val namePattern = Pattern.compile("^[가-힣a-zA-Z]*\$")
 
+    private var imgSet: Int = R.drawable.logo1 // 기본 값으로 초기화
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_up_layout)
@@ -33,6 +35,9 @@ class SignUpPageActivity : AppCompatActivity() {
 
         val btn_signUp = findViewById<Button>(R.id.btn_signupOk)
         val btn_signCancel = findViewById<Button>(R.id.btn_signupcancel)
+
+
+
 
         et_id.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
@@ -86,6 +91,22 @@ class SignUpPageActivity : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
+        //이미지 초기화
+        val iv_logo = findViewById<ImageView>(R.id.imageView)
+        iv_logo.setOnClickListener {
+            imgSet = when ((1..6).random()) {
+                1 -> R.drawable.logo1
+                2 -> R.drawable.logo2
+                3 -> R.drawable.logo3
+                4 -> R.drawable.logo4
+                5 -> R.drawable.logo5
+                else -> R.drawable.logo1
+            }
+
+            iv_logo.setImageDrawable(ResourcesCompat.getDrawable(resources, imgSet, null))
+
+        }
+
         btn_signUp.setOnClickListener {
             val name = et_name.text.toString()
             val id = et_id.text.toString()
@@ -124,13 +145,23 @@ class SignUpPageActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val intent = Intent(this, SignInPageActivity::class.java).apply {
-                putExtra("id", id)
-                putExtra("pw", pw)
-            }
+            val intent = Intent(this, SignInPageActivity::class.java)
+//                .apply {
+//            }
 
-            setResult(RESULT_OK, intent)
-            if (!isFinishing) finish()
+            //수정하겠습니다.
+            intent.putExtra("userName", name)
+            intent.putExtra("userId", id)
+            intent.putExtra("userPw", pw)
+            intent.putExtra("userTel", phone)
+            intent.putExtra("userPosition",position)
+            intent.putExtra("userImage",imgSet)
+
+            startActivity(intent)
+
+//            setResult(RESULT_OK, intent)
+//            if (!isFinishing) finish()
+
         }
 
         btn_signCancel.setOnClickListener {
@@ -139,18 +170,8 @@ class SignUpPageActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        val iv_logo = findViewById<ImageView>(R.id.imageView)
-        iv_logo.setOnClickListener {
-            val id = when ((1..6).random()) {
-                1 -> R.drawable.logo1
-                2 -> R.drawable.logo2
-                3 -> R.drawable.logo3
-                4 -> R.drawable.logo4
-                5 -> R.drawable.logo5
-                else -> R.drawable.logo1
-            }
 
-            iv_logo.setImageDrawable(ResourcesCompat.getDrawable(resources, id, null))
-        }
     }
+
+
 }

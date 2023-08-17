@@ -31,6 +31,7 @@ class MyPageActivity : AppCompatActivity() {
     // 직책
     private val tv_position : TextView by lazy { findViewById(R.id.mypage_tv_position_value) }
 
+
     // 내 정보(이미지)
     private val intent_Image: Int by lazy { intent.getIntExtra(getString(R.string.intent_userImage), -1) }
 
@@ -39,6 +40,9 @@ class MyPageActivity : AppCompatActivity() {
 
     // 내 정보(직책)
     private val intent_Position: String? by lazy { intent.getStringExtra(getString(R.string.intent_userPositionText)) }
+
+
+
 
     // 할일목록 CheckBox관리를위한 List
     private var todoCheckBoxList: MutableList<CheckBox> = mutableListOf()
