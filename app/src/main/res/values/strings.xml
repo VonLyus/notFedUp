@@ -10,6 +10,7 @@
     <string name="intent_userImage">userImage</string>
     <string name="intent_userNameText">userNameText</string>
     <string name="intent_userPositionText">userPositionText</string>
+
     <string name="app_name1">Practice</string>
     <string name="signup_name">이름</string>
     <string name="signup_name1">이름</string>
@@ -35,4 +36,9 @@
     <string name="signup__10_11">10~11자의 숫자만 입력하세요.</string>
     <string name="signup_cancel1">취소 되었습니다.</string>
 
+    <string name="warningBack">작성 중인 내용이 삭제될 수도 있습니다.</string>
+    <string name="warningNull">입력된 값이 없습니다.</string>
+    <string name="noticeComment">댓글을 입력하세요.</string>
+    <string name="comment">댓글</string>
+    
 </resources>

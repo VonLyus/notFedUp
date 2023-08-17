@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import bootcamp.sparta.notlame.R
 import bootcamp.sparta.notlame.mainPage.MainPageActivity
+import bootcamp.sparta.notlame.signUp.SignUpPageActivity
 
 class SignInPageActivity : AppCompatActivity() {
 
@@ -46,7 +47,7 @@ class SignInPageActivity : AppCompatActivity() {
         }
 
         buttonSignUp.setOnClickListener {
-            //startActivity(Intent(this, SignUpActivity::class.java))
+            startActivity(Intent(this, SignUpPageActivity::class.java))
         }
     }
 }
