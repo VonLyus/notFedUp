@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="뻔하지 않조에서\n여러분의 꿈을 이뤄주세요!"
+        android:text="@string/noticeTeam"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아이디"
+        android:text="@string/id"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
@@ -31,7 +31,7 @@
         android:id="@+id/editTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="아이디"
+        android:hint="@string/id"
         android:inputType="text"
         android:padding="32dp"
         android:textColor="#FFFFFF"
@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="비밀번호"
+        android:text="@string/password"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
@@ -51,7 +51,7 @@
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="비밀번호"
+        android:hint="@string/password"
         android:inputType="textVisiblePassword"
         android:textColor="#FFFFFF"
         android:background="@color/white" />
@@ -60,14 +60,14 @@
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="@string/logIn"
         android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SIGN UP"
+        android:text="@string/logUp"
         android:layout_marginTop="16dp" />
 
 </LinearLayout>
