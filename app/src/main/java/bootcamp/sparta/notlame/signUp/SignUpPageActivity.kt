@@ -1,5 +1,6 @@
 package bootcamp.sparta.notlame.signUp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -10,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.signIn.SignInPageActivity
 import java.util.regex.Pattern
 
 class SignUpPageActivity : AppCompatActivity() {
@@ -122,10 +124,10 @@ class SignUpPageActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            //val intent = Intent(this, SignInPageActivity::class.java).apply {
-                //putExtra("id", id)
-                //putExtra("pw", pw)
-            //}
+            val intent = Intent(this, SignInPageActivity::class.java).apply {
+                putExtra("id", id)
+                putExtra("pw", pw)
+            }
 
             setResult(RESULT_OK, intent)
             if (!isFinishing) finish()
