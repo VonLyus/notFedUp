@@ -41,7 +41,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:background="@color/white"
+            app:cardBackgroundColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/mypage_tv_todo_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -165,29 +165,18 @@
             app:layout_constraintStart_toEndOf="@+id/mypage_et_todo"
             app:layout_constraintTop_toTopOf="@+id/mypage_et_todo" />
 
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="15dp"
+        <LinearLayout
+            android:id="@+id/mypage_linearlayout_todo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/mypage_btn_done"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mypage_et_todo">
 
-            <LinearLayout
-                android:id="@+id/mypage_linearlayout_todo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/mypage_btn_done"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mypage_et_todo">
-
-            </LinearLayout>
-
-        </ScrollView>
+        </LinearLayout>
 
 
         <androidx.appcompat.widget.AppCompatButton
