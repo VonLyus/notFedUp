@@ -2,6 +2,7 @@ package bootcamp.sparta.notlame.mainPage
 
 import android.app.Activity
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,6 +18,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
 import bootcamp.sparta.notlame.R
 import bootcamp.sparta.notlame.detailPage.DetailPage
+import bootcamp.sparta.notlame.myPage.MyPageActivity
 import bootcamp.sparta.notlame.writePage.WritePageActivity
 
 class MainPageActivity : AppCompatActivity() {
@@ -27,24 +29,59 @@ class MainPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
 
-        // 임시로 수정 불가로 설정
-        var userNameText = findViewById<EditText>(R.id.userNameText)
-        userNameText.isEnabled = false
-        var userPositionText = findViewById<EditText>(R.id.userPositionText)
-        userPositionText.isEnabled = false
 
-
+        userInfoSetting()
         teamBoardSetting()
-        //setResultSignUp()
         btnClickSet()
+
+
 
     }
 
+    private fun userInfoSetting(){
+        // 임시로 수정 불가로 설정
+
+        val checkName = intent.getStringExtra("userName") ?: "name"
+        val checkId = intent.getStringExtra("userId") ?: "id"
+        val checkPw = intent.getStringExtra("userPw") ?: "pw"
+        val checkTel = intent.getStringExtra("userTel") ?: "tel"
+        val checkPosition = intent.getStringExtra("userPosition") ?: "position"
+        val checkImage = intent.getIntExtra("userImage", 0)
+
+
+        var userImageList1 = findViewById<ImageButton>(R.id.userImageList1)
+        userImageList1.setImageResource(checkImage)
+
+        var userNameText = findViewById<EditText>(R.id.userNameText)
+        userNameText.setText(checkName)
+        userNameText.isEnabled = false
+
+        var userPositionText = findViewById<EditText>(R.id.userPositionText)
+        userPositionText.setText(checkPosition)
+        userPositionText.isEnabled = false
+
+
+
+    }
 
     // 팀 게시판 세팅
     private fun teamBoardSetting(){
 
+        val checkName = intent.getStringExtra("userName") ?: "name"
+        val checkId = intent.getStringExtra("userId") ?: "id"
+        val checkPw = intent.getStringExtra("userPw") ?: "pw"
+        val checkTel = intent.getStringExtra("userTel") ?: "tel"
+        val checkPosition = intent.getStringExtra("userPosition") ?: "position"
+        val checkImage = intent.getIntExtra("userImage", 0)
         val checkValue = intent.getIntExtra("check", 0)
+
+        //이름이랑 데이터 갖고 와야함
+        //
+        //teamBoardUserName1
+        //teamBoardUserDate1
+
+
+
 
         if(checkValue == 1){
             val parentLayout = findViewById<LinearLayout>(R.id.teamBoardLayout)
@@ -88,6 +125,14 @@ class MainPageActivity : AppCompatActivity() {
             teamBoardDetailViewMore1.setOnClickListener{
 
                 val intent = Intent(this, DetailPage::class.java)
+
+                intent.putExtra("userName", checkName)
+                intent.putExtra("userId", checkId)
+                intent.putExtra("userPw", checkPw)
+                intent.putExtra("userTel", checkTel)
+                intent.putExtra("userPosition", checkPosition)
+                intent.putExtra("userImage", checkImage)
+
                 intent.putExtra("detailSubject",title)
                 intent.putExtra("detailContent",comment)
                 startActivity(intent)
@@ -98,40 +143,43 @@ class MainPageActivity : AppCompatActivity() {
 
     }
 
-    //값을 수정해야함      이름 직책 이미지 받아오기
-    private fun setResultSignUp(){
 
-        var userNameText = findViewById<EditText>(R.id.userNameText)
-        var userPositionText = findViewById<EditText>(R.id.userPositionText)
-        var userImage = findViewById<ImageView>(R.id.userImage)
-
-        getContent = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
-        { result ->
-            if (result.resultCode == Activity.RESULT_OK){
-                val username = result.data?.getStringExtra("userNameText") ?: ""
-                val userposition = result.data?.getStringExtra("userPositionText")?:""
-                val userimage = result.data?.getIntExtra("userImage", 0) ?: 0
-                userNameText.setText(username)
-                userPositionText.setText(userposition)
-                userImage.setImageResource(userimage)
-            }
-        }
-
-    }
 
     private fun btnClickSet(){
 
-        // personAdd
+        val checkName = intent.getStringExtra("userName") ?: "name"
+        val checkId = intent.getStringExtra("userId") ?: "id"
+        val checkPw = intent.getStringExtra("userPw") ?: "pw"
+        val checkTel = intent.getStringExtra("userTel") ?: "tel"
+        val checkPosition = intent.getStringExtra("userPosition") ?: "position"
+        val checkImage = intent.getIntExtra("userImage", 0)
+
+
+        val personInfoBtn = findViewById<ImageButton>(R.id.personInfoBtn)
+        personInfoBtn.setOnClickListener{
+            val intent = Intent(this, MyPageActivity::class.java)
+
+            intent.putExtra("userName", checkName)
+            intent.putExtra("userId", checkId)
+            intent.putExtra("userPw", checkPw)
+            intent.putExtra("userTel", checkTel)
+            intent.putExtra("userPosition", checkPosition)
+            intent.putExtra("userImage", checkImage)
+
+            startActivity(intent) }
 
         // 게시판 등록하기
         val boardAddBtn = findViewById<ImageButton>(R.id.boardAddBtn)
         boardAddBtn.setOnClickListener{
             val intent = Intent(this, WritePageActivity::class.java)
-            startActivity(intent)
-        }
-
-
-        }
+            intent.putExtra("userName", checkName)
+            intent.putExtra("userId", checkId)
+            intent.putExtra("userPw", checkPw)
+            intent.putExtra("userTel", checkTel)
+            intent.putExtra("userPosition", checkPosition)
+            intent.putExtra("userImage", checkImage)
+            startActivity(intent) }
+    }
 
 
 }

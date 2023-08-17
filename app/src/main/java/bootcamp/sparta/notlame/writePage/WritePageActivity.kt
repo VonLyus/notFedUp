@@ -10,6 +10,8 @@ import bootcamp.sparta.notlame.R
 import bootcamp.sparta.notlame.mainPage.MainPageActivity
 
 class WritePageActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write_page)
@@ -18,6 +20,15 @@ class WritePageActivity : AppCompatActivity() {
     }
 
     private fun clickSet(){
+
+        val checkName = intent.getStringExtra("userName") ?: "name"
+        val checkId = intent.getStringExtra("userId") ?: "id"
+        val checkPw = intent.getStringExtra("userPw") ?: "pw"
+        val checkTel = intent.getStringExtra("userTel") ?: "tel"
+        val checkPosition = intent.getStringExtra("userPosition") ?: "position"
+        val checkImage = intent.getIntExtra("userImage", 0)
+
+
         val checkBtn = findViewById<Button>(R.id.checkBtn)
         checkBtn.setOnClickListener{
             val writeTitle = findViewById<EditText>(R.id.writeTitle)
@@ -35,6 +46,14 @@ class WritePageActivity : AppCompatActivity() {
             else{
                 // 값도 전달해야함
                 val intent = Intent(this, MainPageActivity::class.java)
+
+                intent.putExtra("userName", checkName)
+                intent.putExtra("userId", checkId)
+                intent.putExtra("userPw", checkPw)
+                intent.putExtra("userTel", checkTel)
+                intent.putExtra("userPosition", checkPosition)
+                intent.putExtra("userImage", checkImage)
+
                 intent.putExtra("Title",title)
                 intent.putExtra("Comment",comment)
 
@@ -48,6 +67,12 @@ class WritePageActivity : AppCompatActivity() {
         val cancelBtn = findViewById<Button>(R.id.cancelBtn)
         cancelBtn.setOnClickListener{
             val intent = Intent(this, MainPageActivity::class.java)
+            intent.putExtra("userName", checkName)
+            intent.putExtra("userId", checkId)
+            intent.putExtra("userPw", checkPw)
+            intent.putExtra("userTel", checkTel)
+            intent.putExtra("userPosition", checkPosition)
+            intent.putExtra("userImage", checkImage)
             startActivity(intent)
         }
     }
