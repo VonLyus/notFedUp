@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#393E4B">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +14,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="120dp" />
+        android:layout_marginBottom="120dp"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,7 +24,8 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
-        android:layout_marginStart="8dp" />
+        android:layout_marginStart="8dp"
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/editTextId"
@@ -30,7 +33,9 @@
         android:layout_height="wrap_content"
         android:hint="아이디"
         android:inputType="text"
-        android:padding="32dp" />
+        android:padding="32dp"
+        android:textColor="#FFFFFF"
+        android:background="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,14 +44,17 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
-        android:layout_marginStart="8dp" />
+        android:layout_marginStart="8dp"
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="비밀번호"
-        android:inputType="textVisiblePassword" />
+        android:inputType="textVisiblePassword"
+        android:textColor="#FFFFFF"
+        android:background="@color/white" />
 
     <Button
         android:id="@+id/buttonLogin"
