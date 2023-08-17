@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">notLame</string>
+    <string name="mypage_todo_textview_title">to do list</string>
+    <string name="button_done">done</string>
+    <string name="butotn_input">input</string>
+    <string name="intent_userImage">userImage</string>
+    <string name="intent_userNameText">userNameText</string>
+    <string name="intent_userPositionText">userPositionText</string>
+    <string name="warningBack">Content being written may be deleted.</string>
+    <string name="warningNull">No value entered.</string>
+    <string name="noticeComment">"Enter your comment "</string>
+    <string name="comment">comment</string>
+</resources>
