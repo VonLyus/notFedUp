@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/noticeTeam"
+        android:text="뻔하지 않조에서\n여러분의 꿈을 이뤄주세요!"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/id"
+        android:text="아이디"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
@@ -30,17 +30,17 @@
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/id"
+        android:layout_height="52dp"
+        android:hint="아이디"
         android:inputType="text"
-        android:padding="32dp"
-        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:textColor="#9B9B9B"
         android:background="@color/white" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
+        android:text="비밀번호"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
@@ -50,24 +50,29 @@
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/password"
+        android:layout_height="52dp"
+        android:hint="비밀번호"
+        android:padding="16dp"
         android:inputType="textVisiblePassword"
-        android:textColor="#FFFFFF"
+        android:textColor="#9B9B9B"
         android:background="@color/white" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/logIn"
-        android:layout_marginTop="16dp" />
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:background="#393E4B" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/logUp"
-        android:layout_marginTop="16dp" />
+        android:text="SIGN UP"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:background="#3A75F4" />
 
 </LinearLayout>

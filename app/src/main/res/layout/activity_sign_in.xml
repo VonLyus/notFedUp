@@ -30,11 +30,11 @@
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:hint="아이디"
         android:inputType="text"
-        android:padding="32dp"
-        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:textColor="#9B9B9B"
         android:background="@color/white" />
 
     <TextView
@@ -50,10 +50,11 @@
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="52dp"
         android:hint="비밀번호"
+        android:padding="16dp"
         android:inputType="textVisiblePassword"
-        android:textColor="#FFFFFF"
+        android:textColor="#9B9B9B"
         android:background="@color/white" />
 
     <Button
@@ -61,13 +62,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="LOGIN"
-        android:layout_marginTop="16dp" />
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:background="#393E4B" />
 
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SIGN UP"
-        android:layout_marginTop="16dp" />
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:background="#3A75F4" />
 
 </LinearLayout>
