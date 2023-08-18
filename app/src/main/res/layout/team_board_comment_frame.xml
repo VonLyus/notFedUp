@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp">
-        <EditText
+        <TextView
             android:id="@+id/teamBoardComment1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,6 +26,7 @@
             android:gravity="center"
             android:hint="setting"
             android:textSize="15dp"/>
+
         <TextView
             android:id="@+id/teamBoardDetailViewMore1"
             android:layout_width="wrap_content"

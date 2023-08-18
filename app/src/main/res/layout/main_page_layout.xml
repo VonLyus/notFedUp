@@ -38,17 +38,17 @@
             app:layout_constraintStart_toEndOf="@+id/userImageFrame"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <TextView
             android:id="@+id/userNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="10dp"
             android:hint="@string/name"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/nameTextView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.300" />
+            app:layout_constraintVertical_bias="0.380" />
 
         <TextView
             android:id="@+id/positionTextView"
@@ -63,17 +63,17 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/userImageFrame" />
 
-        <EditText
+        <TextView
             android:id="@+id/userPositionText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="10dp"
             android:hint="@string/position"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/positionTextView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.650" />
+            app:layout_constraintVertical_bias="0.620" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/personInfoBtn"
@@ -129,11 +129,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatImageButton
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/userImageList1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/profile_set" />
+                    android:src="@drawable/profile_set" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -146,7 +146,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatImageButton
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/userImageList2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -163,11 +163,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatImageButton
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/userImageList3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/profile_set" />
+                    android:src="@drawable/profile_set" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -180,11 +180,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatImageButton
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/userImageList4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/profile_set" />
+                    android:src="@drawable/profile_set" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -197,11 +197,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatImageButton
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/userImageList5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/profile_set" />
+                    android:src="@drawable/profile_set" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </HorizontalScrollView>
@@ -219,6 +219,9 @@
             android:text="@string/teamNoticeBoard"/>
     </androidx.cardview.widget.CardView>
     <!--    팀 게시판    -->
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:id="@+id/teamBoardLayout"
         android:layout_width="match_parent"
@@ -226,8 +229,11 @@
         android:orientation="vertical"
         android:animateLayoutChanges="true">
 
+
+
         <!--    team_board_frame.xml    -->
         <!--    team_board_comment_frame.xml      -->
 
     </LinearLayout>
+</ScrollView>
 </LinearLayout>
