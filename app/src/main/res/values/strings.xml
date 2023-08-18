@@ -16,10 +16,7 @@
     <string name="_10_11">10~11자의 숫자만 입력하세요.</string>
     <string name="kor">한글 또는 영어만 입력하세요.</string>
     <string name="info">입력되지 않은 정보가 있습니다</string>
-    <string name="signup_kor">한글 또는 영어만 입력하세요.</string>
-    <string name="signup__5_10">5~10자의 영어(대소문자)와 숫자만 입력하세요.</string>
-    <string name="signup__8_15">8~15자의 영어(대소문자), 숫자, 특수문자를 포함하세요.</string>
-    <string name="signup__10_11">10~11자의 숫자만 입력하세요.</string>
+
     <string name="signup_cancel1">취소 되었습니다.</string>
 
     //detail
@@ -28,12 +25,12 @@
     <string name="noticeComment">댓글을 입력하세요.</string>
     <string name="comment">댓글</string>
 
-    //singIn
+    //signIn
     <string name="noticeTeam">뻔하지 않조에서 여러분의 꿈을 이뤄주세요!</string>
     <string name="id">아이디</string>
     <string name="password">비밀번호</string>
     <string name="logIn">LOG IN</string>
-    <string name="logUp">LOG UP</string>
+    <string name="signUp">SIGN UP</string>
     <string name="checkIDPassword">아이디/비밀번호를 확인해주세요</string>
     <string name="successLogin">로그인 성공</string>
 
