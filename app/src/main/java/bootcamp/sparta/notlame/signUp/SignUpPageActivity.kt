@@ -126,22 +126,22 @@ class SignUpPageActivity : AppCompatActivity() {
             val phoneValid = phonePattern.matcher(phone).matches()
 
             if (!nameValid) {
-                et_name.error = getString(R.string.signup_kor)
+                et_name.error = getString(R.string.kor)
                 return@setOnClickListener
             }
 
             if (!idValid) {
-                et_id.error = getString(R.string.signup__5_10)
+                et_id.error = getString(R.string._5_10)
                 return@setOnClickListener
             }
 
             if (!pwValid) {
-                et_pw.error = getString(R.string.signup__8_15)
+                et_pw.error = getString(R.string._8_15)
                 return@setOnClickListener
             }
 
             if (!phoneValid) {
-                et_phone.error = getString(R.string.signup__10_11)
+                et_phone.error = getString(R.string._10_11)
                 return@setOnClickListener
             }
 
