@@ -2,6 +2,7 @@ package bootcamp.sparta.notlame.mainPage
 
 import android.app.Activity
 import android.content.Intent
+import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -33,6 +34,7 @@ class MainPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
+
 
 
         userInfoSetting()
@@ -115,6 +117,7 @@ class MainPageActivity : AppCompatActivity() {
 
         var checkValue: Int? = null
 
+
         var index = 0
 
         val startForResult =
@@ -138,8 +141,10 @@ class MainPageActivity : AppCompatActivity() {
 
                     checkValue = data?.getIntExtra("check",0)
 
+
                     if(checkValue == 1){
                         val parentLayout = findViewById<LinearLayout>(R.id.teamBoardLayout)
+
 
                         val inflater = LayoutInflater.from(this)
 
@@ -148,6 +153,7 @@ class MainPageActivity : AppCompatActivity() {
                         parentLayout.addView(teamLayout)
                         val titleEditText = teamLayout.findViewById<TextView>(R.id.teamBoardTitle1)
                         titleEditText.text=title[index]
+
 
 
                         // 동적 생성할 layout을 선언
@@ -179,7 +185,6 @@ class MainPageActivity : AppCompatActivity() {
                         userDateText.text = getCurrentDate()
                         val userNameText= teamLayout.findViewById<TextView>(R.id.teamBoardUserName1)
                         userNameText.text = checkName
-                        Log.d("USUNG", "teamBoardFrame1 clicked! " + title[index])
 
                         //DetailPage
                         //동적 생성에 대한 아이디를 받아야 한다.        --> 결국 list해서 값을 저장해야 한다.
@@ -190,7 +195,6 @@ class MainPageActivity : AppCompatActivity() {
                         teamBoardDetailViewMore.id = index
 
 
-                        //참조??
                         teamBoardDetailViewMore.setOnClickListener{
 
                             val intent = Intent(this, DetailPage::class.java)
@@ -214,21 +218,12 @@ class MainPageActivity : AppCompatActivity() {
 
 
 
-        //이름이랑 데이터 갖고 와야함
-        //
-        //teamBoardUserName1
-        //teamBoardUserDate1
-
-
-
-
 
         // 게시판 등록하기
         val boardAddBtn = findViewById<ImageButton>(R.id.boardAddBtn)
         boardAddBtn.setOnClickListener{
             val intent = Intent(this, WritePageActivity::class.java)
-//            intent.putExtra("userName", checkName)
-//
+
             startForResult.launch(intent) }
 
     }
@@ -262,7 +257,6 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("userImage", checkImage)
 
             startActivity(intent) }
-
 
         }
 

@@ -7,67 +7,85 @@
     android:padding="16dp"
     android:background="#393E4B">
 
+    <!-- 첫 번째 TextView -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/noticeTeam"
+        android:text="뻔하지 않조에서\n여러분의 꿈을 이뤄주세요!"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="32dp"
         android:textColor="#FFFFFF" />
 
+    <!-- 아이디 레이블 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/id"
+        android:text="아이디"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:textColor="#FFFFFF" />
 
+    <!-- 아이디 입력 필드 -->
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/id"
+        android:hint="아이디"
         android:inputType="text"
-        android:padding="32dp"
+        android:padding="16dp"
         android:textColor="#FFFFFF"
-        android:background="@color/white" />
+        android:background="@color/white"
+        android:layout_marginBottom="16dp" />
 
+    <!-- 비밀번호 레이블 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
+        android:text="비밀번호"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="start"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:textColor="#FFFFFF" />
 
+    <!-- 비밀번호 입력 필드 -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="@string/password"
+        android:layout_height="52dp"
+        android:hint="비밀번호"
+        android:padding="16dp"
         android:inputType="textVisiblePassword"
         android:textColor="#FFFFFF"
-        android:background="@color/white" />
+        android:background="@color/white"
+        android:layout_marginBottom="32dp" />
 
+    <!-- 로그인 버튼 -->
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/logIn"
-        android:layout_marginTop="16dp" />
+        android:text="LOGIN"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_rect" />
 
+    <!-- 회원 가입 버튼 -->
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signUp"
-        android:layout_marginTop="16dp" />
+        android:text="SIGN UP"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:radius="0dp"
+        android:background="@drawable/button_background2_rect" />
+
 
 </LinearLayout>

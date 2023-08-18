@@ -14,17 +14,13 @@ import com.google.android.material.snackbar.Snackbar
 
 class WritePageActivity : AppCompatActivity() {
 
+
     private lateinit var title: String
     private lateinit var comment: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_write_page)
-
-
-
-
-
-
 
 
         clickSet()
@@ -33,9 +29,10 @@ class WritePageActivity : AppCompatActivity() {
 
     private fun clickSet(){
 
-        //
+
         val writeTitle = findViewById<EditText>(R.id.writeTitle)
         val writeComment = findViewById<EditText>(R.id.writeComment)
+
         val checkBtn = findViewById<Button>(R.id.checkBtn)
         checkBtn.setOnClickListener{
 
@@ -54,8 +51,8 @@ class WritePageActivity : AppCompatActivity() {
             }
             else{
                 // 값도 전달해야함
-                val intent = Intent()//(this, MainPageActivity::class.java)
 
+                val intent = Intent()//(this, MainPageActivity::class.java)
 //
                 intent.putExtra("Title",title)
                 intent.putExtra("Comment",comment)
@@ -69,6 +66,7 @@ class WritePageActivity : AppCompatActivity() {
 
         val cancelBtn = findViewById<Button>(R.id.cancelBtn)
         cancelBtn.setOnClickListener{
+
 
             title = writeTitle.text.toString()
 

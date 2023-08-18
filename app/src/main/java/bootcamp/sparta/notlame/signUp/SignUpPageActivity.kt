@@ -171,7 +171,9 @@ class SignUpPageActivity : AppCompatActivity() {
             finish()
         }
 
+
     }
 
 
 }
+
