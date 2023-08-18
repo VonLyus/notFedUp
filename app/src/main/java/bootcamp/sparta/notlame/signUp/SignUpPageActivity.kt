@@ -17,7 +17,7 @@ import java.util.regex.Pattern
 class SignUpPageActivity : AppCompatActivity() {
 
     private val idPattern = Pattern.compile("^[a-zA-Z0-9]{5,10}\$")
-    private val pwPattern = Pattern.compile("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@#$%^&+=]).{8,15}\$")
+    private val pwPattern = Pattern.compile("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&+=]).{8,15}\$")
     private val phonePattern = Pattern.compile("^[0-9]{10,11}\$")
     private val namePattern = Pattern.compile("^[가-힣a-zA-Z]*\$")
 
