@@ -17,7 +17,7 @@ import java.util.regex.Pattern
 class SignUpPageActivity : AppCompatActivity() {
 
     private val idPattern = Pattern.compile("^[a-zA-Z0-9]{5,10}\$")
-    private val pwPattern = Pattern.compile("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@#$%^&+=]).{8,15}\$")
+    private val pwPattern = Pattern.compile("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&+=]).{8,15}\$")
     private val phonePattern = Pattern.compile("^[0-9]{10,11}\$")
     private val namePattern = Pattern.compile("^[가-힣a-zA-Z]*\$")
 
@@ -126,22 +126,22 @@ class SignUpPageActivity : AppCompatActivity() {
             val phoneValid = phonePattern.matcher(phone).matches()
 
             if (!nameValid) {
-                et_name.error = getString(R.string.signup_kor)
+                et_name.error = getString(R.string.kor)
                 return@setOnClickListener
             }
 
             if (!idValid) {
-                et_id.error = getString(R.string.signup__5_10)
+                et_id.error = getString(R.string._5_10)
                 return@setOnClickListener
             }
 
             if (!pwValid) {
-                et_pw.error = getString(R.string.signup__8_15)
+                et_pw.error = getString(R.string._8_15)
                 return@setOnClickListener
             }
 
             if (!phoneValid) {
-                et_phone.error = getString(R.string.signup__10_11)
+                et_phone.error = getString(R.string._10_11)
                 return@setOnClickListener
             }
 
@@ -165,9 +165,8 @@ class SignUpPageActivity : AppCompatActivity() {
         }
 
         btn_signCancel.setOnClickListener {
-            Toast.makeText(this@SignUpPageActivity,
-                getString(R.string.signup_cancel1), Toast.LENGTH_SHORT).show()
-            //val intent = Intent(this@SignUpActivity, SignInPageActivity::class.java)
+            Toast.makeText(this@SignUpPageActivity, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@SignUpPageActivity, SignInPageActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -177,3 +176,4 @@ class SignUpPageActivity : AppCompatActivity() {
 
 
 }
+
