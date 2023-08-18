@@ -165,13 +165,11 @@ class SignUpPageActivity : AppCompatActivity() {
         }
 
         btn_signCancel.setOnClickListener {
-            Toast.makeText(this@SignUpPageActivity,
-                getString(R.string.signup_cancel1), Toast.LENGTH_SHORT).show()
-            //val intent = Intent(this@SignUpActivity, SignInPageActivity::class.java)
+            Toast.makeText(this@SignUpPageActivity, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@SignUpPageActivity, SignInPageActivity::class.java)
             startActivity(intent)
             finish()
         }
-
 
     }
 

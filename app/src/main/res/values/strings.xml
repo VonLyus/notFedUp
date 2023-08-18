@@ -51,7 +51,7 @@
     <string name="teamNoticeBoard">팀 게시판</string>
 
     //singUp
-    <string name="notice2Team">우리와 함께하는 당신은 이미 뻔하지 않조!</string>
+    <string name="notice2Team">우리와 함께하는 당신은\n이미 뻔하지 않조!</string>
     <string name="inputID">아이디를 입력하세요.</string>
     <string name="inputPassword">비밀번호를 입력하세요.</string>
     <string name="inputPosition">직책을 입력하세요.</string>
