@@ -21,7 +21,7 @@
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="20dp"
-            android:scaleType="center"
+            android:scaleType="fitCenter"
             android:layout_height="50dp"
             android:src="@drawable/baseline_arrow_back_ios_24"
             android:background="@android:color/transparent"
