@@ -30,6 +30,8 @@ class MyPageActivity : AppCompatActivity() {
     private val tv_name : TextView by lazy { findViewById(R.id.mypage_tv_name) }
     // 직책
     private val tv_position : TextView by lazy { findViewById(R.id.mypage_tv_position_value) }
+    // 전화번호
+    private val tv_tel : TextView by lazy { findViewById(R.id.mypage_tv_phone_value) }
 
 
     // 내 정보(이미지)
@@ -41,7 +43,8 @@ class MyPageActivity : AppCompatActivity() {
     // 내 정보(직책)
     private val intent_Position: String? by lazy { intent.getStringExtra(getString(R.string.intent_userPositionText)) }
 
-
+    // 내 정보(번호)
+    private val intent_Tel: String? by lazy{ intent.getStringExtra(getString(R.string.intent_userTelText))}
 
 
     // 할일목록 CheckBox관리를위한 List
@@ -53,6 +56,7 @@ class MyPageActivity : AppCompatActivity() {
 
         setLayoutData()
         registerButtonClickListeners()
+
     }
 
     // 인텐트에서 받아온 Data들을 Layout에 배치
@@ -60,6 +64,7 @@ class MyPageActivity : AppCompatActivity() {
         iv_Image.setImageResource(intent_Image)
         tv_name.text = intent_Name
         tv_position.text = intent_Position
+        tv_tel.text = intent_Tel
     }
 
     // button에 onClickLstener 등록
@@ -71,8 +76,8 @@ class MyPageActivity : AppCompatActivity() {
     // 확인버튼
     private fun doneBtnOnClickListener() {
         doneBtn.setOnClickListener {
-            val intent = Intent(this, MainPageActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, MainPageActivity::class.java)
+//           startActivity(intent)
             finish()
         }
     }

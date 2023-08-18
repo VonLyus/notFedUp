@@ -38,7 +38,7 @@
         android:hint="아이디"
         android:inputType="text"
         android:padding="16dp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:background="@color/white"
         android:layout_marginBottom="16dp" />
 
@@ -61,8 +61,8 @@
         android:layout_height="52dp"
         android:hint="비밀번호"
         android:padding="16dp"
-        android:inputType="textVisiblePassword"
-        android:textColor="#FFFFFF"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
         android:background="@color/white"
         android:layout_marginBottom="32dp" />
 

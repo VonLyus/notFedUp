@@ -54,6 +54,9 @@ class MainPageActivity : AppCompatActivity() {
         val checkPosition = intent.getStringExtra("userPosition") ?: "position"
         val checkImage = intent.getIntExtra("userImage", 0)
 
+        //
+
+
         var userImage = findViewById<ImageView>(R.id.userImage)
         userImage.setImageResource(checkImage)
         userImage.setOnClickListener{
@@ -68,12 +71,7 @@ class MainPageActivity : AppCompatActivity() {
 
             startActivity(intent) }
 
-
-        var userNameText = findViewById<TextView>(R.id.userNameText)
-        userNameText.text=checkName
-
-        var userPositionText = findViewById<TextView>(R.id.userPositionText)
-        userPositionText.text=checkPosition
+        //
 
         var userImageList1 = findViewById<ImageView>(R.id.userImageList1)
         userImageList1.setImageResource(checkImage)
@@ -88,6 +86,16 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("userImage", checkImage)
 
             startActivity(intent) }
+
+        //
+
+        var userNameText = findViewById<TextView>(R.id.userNameText)
+        userNameText.text=checkName
+
+        var userPositionText = findViewById<TextView>(R.id.userPositionText)
+        userPositionText.text=checkPosition
+
+        //
 
         var userImageList2 = findViewById<ImageView>(R.id.userImageList2)
         userImageList2.setImageResource(R.drawable.profile_set1)

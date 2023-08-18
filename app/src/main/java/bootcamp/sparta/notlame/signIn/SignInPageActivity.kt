@@ -27,10 +27,10 @@ class SignInPageActivity : AppCompatActivity() {
         buttonSignUp = findViewById(R.id.buttonSignUp)
 
         buttonLogin.setOnClickListener {
+
             val id = editTextId.text.toString()
             val password = editTextPassword.text.toString()
 
-            //값을 받아내야함
 
             val checkName = intent.getStringExtra("userName") ?: "name"
             val checkId = intent.getStringExtra("userId") ?: "id"
@@ -39,7 +39,6 @@ class SignInPageActivity : AppCompatActivity() {
             val checkPosition = intent.getStringExtra("userPosition") ?: "position"
             val checkImage = intent.getIntExtra("userImage", 0)
 
-            //값 판단이 안되어 있음
 
             if (id.isEmpty() || password.isEmpty()) {
 
@@ -49,13 +48,6 @@ class SignInPageActivity : AppCompatActivity() {
 
                 Toast.makeText(this, R.string.successLogin, Toast.LENGTH_SHORT).show()
 
-
-//                // Get the user information from SharedPreferences
-//                val sharedPrefs = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-//                val name = sharedPrefs.getString("userName", "이름 없음")
-//                val age = sharedPrefs.getString("userAge", "나이 없음")
-//                val mbti = sharedPrefs.getString("userMBTI", "MBTI 없음")
-// intent로 값을 넘기는 것으로 정했어서 우선 수정하겠습니다
 
                 val intent = Intent(this, MainPageActivity::class.java)
 
