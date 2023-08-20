@@ -2,58 +2,90 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#393E4B"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/logo_image" />
-
+    <!-- 첫 번째 TextView -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:text="@string/noticeTeam"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <!-- 아이디 레이블 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/id"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- 아이디 입력 필드 -->
     <EditText
         android:id="@+id/editTextId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your ID"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:hint="@string/id"
         android:inputType="text"
-        android:padding="32dp" />
+        android:padding="16dp"
+        android:textColor="@color/black" />
 
+    <!-- 비밀번호 레이블 -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:layout_gravity="start"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/password"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold" />
 
+    <!-- 비밀번호 입력 필드 -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Enter your Password"
-        android:inputType="textVisiblePassword" />
+        android:layout_height="52dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="@color/black" />
 
+    <!-- 로그인 버튼 -->
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_rect"
+        android:text="@string/logIn"
+        android:textColor="#FFFFFF" />
 
+    <!-- 회원 가입 버튼 -->
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SIGN UP"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background2_rect"
+        android:radius="0dp"
+        android:text="@string/signUp"
+        android:textColor="#FFFFFF" />
+
 
 </LinearLayout>
