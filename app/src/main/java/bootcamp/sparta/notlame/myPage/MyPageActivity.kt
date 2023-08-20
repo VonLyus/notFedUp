@@ -13,6 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import bootcamp.sparta.notlame.mainPage.MainPageActivity
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.Util.animSlideLeft
 
 class MyPageActivity : AppCompatActivity() {
     // 핢일 추가하기 EditText
@@ -76,8 +77,7 @@ class MyPageActivity : AppCompatActivity() {
     // 확인버튼
     private fun doneBtnOnClickListener() {
         doneBtn.setOnClickListener {
-//            val intent = Intent(this, MainPageActivity::class.java)
-//           startActivity(intent)
+            animSlideLeft(this)
             finish()
         }
     }

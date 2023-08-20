@@ -11,6 +11,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.Util.animSlideLeft
+import bootcamp.sparta.notlame.Util.animSlideRight
 import bootcamp.sparta.notlame.signIn.SignInPageActivity
 import java.util.regex.Pattern
 
@@ -146,8 +148,6 @@ class SignUpPageActivity : AppCompatActivity() {
             }
 
             val intent = Intent(this, SignInPageActivity::class.java)
-//                .apply {
-//            }
 
             //수정하겠습니다.
             intent.putExtra("userName", name)
@@ -158,16 +158,15 @@ class SignUpPageActivity : AppCompatActivity() {
             intent.putExtra("userImage",imgSet)
 
             startActivity(intent)
-
-//            setResult(RESULT_OK, intent)
-//            if (!isFinishing) finish()
-
+            animSlideRight(this)
+            finish()
         }
 
         btn_signCancel.setOnClickListener {
             Toast.makeText(this@SignUpPageActivity, "취소 되었습니다.", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@SignUpPageActivity, SignInPageActivity::class.java)
             startActivity(intent)
+            animSlideLeft(this)
             finish()
         }
 
