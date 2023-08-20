@@ -28,7 +28,7 @@
     <string name="comment">댓글</string>
 
     //signIn
-    <string name="noticeTeam">뻔하지 않조에서 여러분의 꿈을 이뤄주세요!</string>
+    <string name="noticeTeam">뻔하지 않조에서\n여러분의 꿈을 이뤄주세요!</string>
     <string name="id">아이디</string>
     <string name="password">비밀번호</string>
     <string name="logIn">LOG IN</string>

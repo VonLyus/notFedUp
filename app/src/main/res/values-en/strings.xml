@@ -17,7 +17,7 @@
     <string name="warningNull">No value entered.</string>
     <string name="noticeComment">"Enter your comment "</string>
     <string name="comment">comment</string>
-    <string name="noticeTeam">Make your dreams come true in NotLame!</string>
+    <string name="noticeTeam">Make your dreams come true\nin NotLame!</string>
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="logIn">LOG IN</string>
