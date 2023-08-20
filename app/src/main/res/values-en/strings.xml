@@ -7,9 +7,6 @@
     <string name="butotn_input">Input</string>
     <string name="mypage_overlap_todo">Already registered to-dos exist in the list.</string>
     <string name="mypage_edittext_null">Enter to further shorten the to-do!</string>
-    <string name="intent_userImage">userImage</string>
-    <string name="intent_userNameText">userNameText</string>
-    <string name="intent_userPositionText">userPositionText</string>
     <string name="_5_10">Please enter 5-10 English characters (uppercase and lowercase) and numbers only</string>
     <string name="_8_15">Please include 8-15 English characters (uppercase and lowercase), numbers, and special characters.</string>
     <string name="_10_11">" Please enter only 10-11 digit numbers."</string>
@@ -20,7 +17,7 @@
     <string name="warningNull">No value entered.</string>
     <string name="noticeComment">"Enter your comment "</string>
     <string name="comment">comment</string>
-    <string name="noticeTeam">Make your dreams come true in NotLame!</string>
+    <string name="noticeTeam">Make your dreams come true\nin NotLame!</string>
     <string name="id">ID</string>
     <string name="password">Password</string>
     <string name="logIn">LOG IN</string>

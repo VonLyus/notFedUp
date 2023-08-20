@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.Util.animSlideLeft
+import bootcamp.sparta.notlame.Util.animSlideRight
 import bootcamp.sparta.notlame.mainPage.MainPageActivity
 import com.google.android.material.snackbar.Snackbar
 
@@ -60,6 +62,7 @@ class WritePageActivity : AppCompatActivity() {
                 intent.putExtra("check", 1)
                 //registerForActivityResult를 사용
                 setResult(Activity.RESULT_OK, intent)
+                animSlideRight(this)
                 finish()
             }
         }
@@ -75,6 +78,7 @@ class WritePageActivity : AppCompatActivity() {
             if(title.isNullOrEmpty() && comment.isNullOrEmpty()){
                 val intent = Intent()//(this, MainPageActivity::class.java)
                 setResult(Activity.RESULT_OK, intent)
+                animSlideLeft(this)
                 finish()
 
             }

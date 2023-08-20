@@ -17,6 +17,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.widget.ConstraintLayout
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.Util.animSlideRight
 import bootcamp.sparta.notlame.detailPage.DetailPage
 import bootcamp.sparta.notlame.myPage.MyPageActivity
 import bootcamp.sparta.notlame.writePage.WritePageActivity
@@ -30,21 +31,16 @@ class MainPageActivity : AppCompatActivity() {
 //    private lateinit var getContent: ActivityResultLauncher<Intent>
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
 
-
-
         userInfoSetting()
         teamBoardSetting()
         myPageSet()
-
-
     }
 
-    private fun userInfoSetting(){
+    private fun userInfoSetting() {
         // 임시로 수정 불가로 설정
 
         val checkName = intent.getStringExtra("userName") ?: "name"
@@ -59,7 +55,7 @@ class MainPageActivity : AppCompatActivity() {
 
         var userImage = findViewById<ImageView>(R.id.userImage)
         userImage.setImageResource(checkImage)
-        userImage.setOnClickListener{
+        userImage.setOnClickListener {
             val intent = Intent(this, MyPageActivity::class.java)
 
             intent.putExtra("userName", checkName)
@@ -69,13 +65,15 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("userPosition", checkPosition)
             intent.putExtra("userImage", checkImage)
 
-            startActivity(intent) }
+            startActivity(intent)
+            animSlideRight(this)
+        }
 
         //
 
         var userImageList1 = findViewById<ImageView>(R.id.userImageList1)
         userImageList1.setImageResource(checkImage)
-        userImageList1.setOnClickListener{
+        userImageList1.setOnClickListener {
             val intent = Intent(this, MyPageActivity::class.java)
 
             intent.putExtra("userName", checkName)
@@ -85,15 +83,17 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("userPosition", checkPosition)
             intent.putExtra("userImage", checkImage)
 
-            startActivity(intent) }
+            startActivity(intent)
+            animSlideRight(this)
+        }
 
         //
 
         var userNameText = findViewById<TextView>(R.id.userNameText)
-        userNameText.text=checkName
+        userNameText.text = checkName
 
         var userPositionText = findViewById<TextView>(R.id.userPositionText)
-        userPositionText.text=checkPosition
+        userPositionText.text = checkPosition
 
         //
 
@@ -112,15 +112,14 @@ class MainPageActivity : AppCompatActivity() {
         userImageList5.setImageResource(R.drawable.profile_set4)
 
 
-
     }
 
     // 팀 게시판 세팅
-    private fun teamBoardSetting(){
+    private fun teamBoardSetting() {
 
         //게시판 값 받아오기
         //빈 리스트 생성
-        val title : MutableList<String> = mutableListOf()  //: String? = null
+        val title: MutableList<String> = mutableListOf()  //: String? = null
         var comment: MutableList<String> = mutableListOf() //: String? = null
 
         var checkValue: Int? = null
@@ -132,7 +131,6 @@ class MainPageActivity : AppCompatActivity() {
             registerForActivityResult(ActivityResultContracts.StartActivityForResult())
             { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
-
 
 
                     //결과에 대해 받아오게 되면 실행되는 거기 때문에 teamboard를 여기에 생성해야 한다
@@ -147,10 +145,10 @@ class MainPageActivity : AppCompatActivity() {
                     title.add(data?.getStringExtra("Title").toString())
                     comment.add(data?.getStringExtra("Comment").toString())
 
-                    checkValue = data?.getIntExtra("check",0)
+                    checkValue = data?.getIntExtra("check", 0)
 
 
-                    if(checkValue == 1){
+                    if (checkValue == 1) {
                         val parentLayout = findViewById<LinearLayout>(R.id.teamBoardLayout)
 
 
@@ -160,27 +158,29 @@ class MainPageActivity : AppCompatActivity() {
                         val teamLayout = inflater.inflate(R.layout.team_board_frame, null)
                         parentLayout.addView(teamLayout)
                         val titleEditText = teamLayout.findViewById<TextView>(R.id.teamBoardTitle1)
-                        titleEditText.text=title[index]
-
+                        titleEditText.text = title[index]
 
 
                         // 동적 생성할 layout을 선언
-                        val commentLayout = inflater.inflate(R.layout.team_board_comment_frame, null)
+                        val commentLayout =
+                            inflater.inflate(R.layout.team_board_comment_frame, null)
                         //동적으로 id 생성하기      -> 1부터 값이 생성됨
                         //commentLayout.id = View.generateViewId()
 
                         parentLayout.addView(commentLayout)
-                        val commentEditText = commentLayout.findViewById<TextView>(R.id.teamBoardComment1)
-                        commentEditText.text=comment[index]
-
+                        val commentEditText =
+                            commentLayout.findViewById<TextView>(R.id.teamBoardComment1)
+                        commentEditText.text = comment[index]
 
 
                         //teamLayout
-                        val teamBoardFrame1 = teamLayout.findViewById<ConstraintLayout>(R.id.teamBoardFrame1)
-                        val teamBoardDetailFrame1 = commentLayout.findViewById<ConstraintLayout>(R.id.teamBoardDetailFrame1)
-                        teamBoardFrame1.setOnClickListener{
+                        val teamBoardFrame1 =
+                            teamLayout.findViewById<ConstraintLayout>(R.id.teamBoardFrame1)
+                        val teamBoardDetailFrame1 =
+                            commentLayout.findViewById<ConstraintLayout>(R.id.teamBoardDetailFrame1)
+                        teamBoardFrame1.setOnClickListener {
 
-                            if(teamBoardDetailFrame1.visibility == View.VISIBLE) {
+                            if (teamBoardDetailFrame1.visibility == View.VISIBLE) {
                                 teamBoardDetailFrame1.visibility = View.GONE
                             } else {
                                 teamBoardDetailFrame1.visibility = View.VISIBLE
@@ -189,9 +189,11 @@ class MainPageActivity : AppCompatActivity() {
                         }
 
 
-                        val userDateText= teamLayout.findViewById<TextView>(R.id.teamBoardUserDate1)
+                        val userDateText =
+                            teamLayout.findViewById<TextView>(R.id.teamBoardUserDate1)
                         userDateText.text = getCurrentDate()
-                        val userNameText= teamLayout.findViewById<TextView>(R.id.teamBoardUserName1)
+                        val userNameText =
+                            teamLayout.findViewById<TextView>(R.id.teamBoardUserName1)
                         userNameText.text = checkName
 
                         //DetailPage
@@ -199,11 +201,12 @@ class MainPageActivity : AppCompatActivity() {
                         //더 보기 기능
                         //index 판단을 해야함
 
-                        val teamBoardDetailViewMore = commentLayout.findViewById<TextView>(R.id.teamBoardDetailViewMore1)
+                        val teamBoardDetailViewMore =
+                            commentLayout.findViewById<TextView>(R.id.teamBoardDetailViewMore1)
                         teamBoardDetailViewMore.id = index
 
 
-                        teamBoardDetailViewMore.setOnClickListener{
+                        teamBoardDetailViewMore.setOnClickListener {
 
                             val intent = Intent(this, DetailPage::class.java)
 
@@ -211,10 +214,11 @@ class MainPageActivity : AppCompatActivity() {
 
                             intent.putExtra("userImage", checkImage)
 
-                            intent.putExtra("detailSubject",title[teamBoardDetailViewMore.id])
-                            intent.putExtra("detailContent",comment[teamBoardDetailViewMore.id])
+                            intent.putExtra("detailSubject", title[teamBoardDetailViewMore.id])
+                            intent.putExtra("detailContent", comment[teamBoardDetailViewMore.id])
 
                             startActivity(intent)
+                            animSlideRight(this)
 
                         }
 
@@ -225,14 +229,14 @@ class MainPageActivity : AppCompatActivity() {
             }
 
 
-
-
         // 게시판 등록하기
         val boardAddBtn = findViewById<ImageButton>(R.id.boardAddBtn)
-        boardAddBtn.setOnClickListener{
+        boardAddBtn.setOnClickListener {
             val intent = Intent(this, WritePageActivity::class.java)
 
-            startForResult.launch(intent) }
+            startForResult.launch(intent)
+            animSlideRight(this)
+        }
 
     }
 
@@ -243,7 +247,7 @@ class MainPageActivity : AppCompatActivity() {
         return dateFormat.format(currentDate)
     }
 
-    private fun myPageSet(){
+    private fun myPageSet() {
 
         val checkName = intent.getStringExtra("userName") ?: "name"
         val checkId = intent.getStringExtra("userId") ?: "id"
@@ -254,7 +258,7 @@ class MainPageActivity : AppCompatActivity() {
 
 
         val personInfoBtn = findViewById<ImageButton>(R.id.personInfoBtn)
-        personInfoBtn.setOnClickListener{
+        personInfoBtn.setOnClickListener {
             val intent = Intent(this, MyPageActivity::class.java)
 
             intent.putExtra("userName", checkName)
@@ -264,9 +268,11 @@ class MainPageActivity : AppCompatActivity() {
             intent.putExtra("userPosition", checkPosition)
             intent.putExtra("userImage", checkImage)
 
-            startActivity(intent) }
-
+            startActivity(intent)
+            animSlideRight(this)
         }
+
+    }
 
 
 }

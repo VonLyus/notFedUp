@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import bootcamp.sparta.notlame.R
+import bootcamp.sparta.notlame.Util.animSlideRight
 import bootcamp.sparta.notlame.mainPage.MainPageActivity
 import bootcamp.sparta.notlame.signUp.SignUpPageActivity
 
@@ -58,6 +59,8 @@ class SignInPageActivity : AppCompatActivity() {
                 intent.putExtra("userPosition", checkPosition)
                 intent.putExtra("userImage", checkImage)
                 startActivity(intent)
+                animSlideRight(this)
+                finish()
             }
             else{
                 Toast.makeText(this, R.string.checkIDPassword, Toast.LENGTH_SHORT).show()
@@ -66,6 +69,7 @@ class SignInPageActivity : AppCompatActivity() {
 
         buttonSignUp.setOnClickListener {
             startActivity(Intent(this, SignUpPageActivity::class.java))
+            animSlideRight(this)
         }
     }
 }
